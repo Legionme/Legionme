@@ -1,0 +1,19 @@
+// script.js
+
+// 创建樱花动画
+function createSakura(num) {
+    const container = document.getElementById('sakura-animation');
+    for (let i = 0; i < num; i++) {
+        const sakura = document.createElement('div');
+        sakura.classList.add('sakura');
+        sakura.style.left = Math.random() * 100 + '%';
+        sakura.style.top = Math.random() * -50 + '%';
+        sakura.style.animationDelay = Math.random() * 5 + 's';
+        container.appendChild(sakura);
+    }
+}
+
+// 初始化樱花动画
+window.onload = function() {
+    createSakura(50); // 创建 50 个樱花
+};
